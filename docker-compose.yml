@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3005:3005"
+    volumes:
+      - db-data:/app/data
+    environment:
+      - DATABASE_URL=file:/app/data/dev.db
+
+volumes:
+  db-data:

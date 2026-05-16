@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Article {
+  id              String @id
+  title           String
+  topic           String
+  readTimeMinutes Int
+  body            String
+}
+
+model MeditationSession {
+  id              String           @id
+  title           String
+  category        String
+  durationMinutes Int
+  isPro           Boolean
+  steps           MeditationStep[]
+}
+
+model MeditationStep {
+  id                     Int               @id @default(autoincrement())
+  order                  Int
+  instruction            String?
+  silenceDurationSeconds Int?
+  sessionId              String
+  session                MeditationSession @relation(fields: [sessionId], references: [id])
+}
+
+model Affirmation {
+  id       Int    @id @default(autoincrement())
+  quote    String
+  category String
+}

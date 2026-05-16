@@ -1,0 +1,716 @@
+[
+  {
+    "id": "morning-001",
+    "title": "Morning Energy Boost",
+    "category": "morning",
+    "durationMinutes": 5,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Sit upright and plant both feet flat on the floor. Roll your shoulders back, lift the crown of your head toward the ceiling, and let your hands rest open on your thighs. Take one slow breath in through your nose, and sigh it out through your mouth. You are awake. You are here. This day is beginning."
+      },
+      {
+        "instruction": "Breathe in deeply for a count of four, filling your belly first, then your chest. Hold for two. Now exhale fully for a count of six, emptying completely. Repeat this three times. With each exhale, feel the last traces of sleep releasing from your body."
+      },
+      {
+        "instruction": "Bring your attention to your body. Roll your neck gently side to side. Squeeze your hands into fists, then spread your fingers wide. Press your feet into the floor. Wake up every part of you — you are not just getting through today, you are showing up for it."
+      },
+      {
+        "instruction": "Think of one thing you are genuinely looking forward to today — a conversation, a task, a moment of quiet, or simply a good cup of coffee. Let that small spark of anticipation land in your chest. That feeling is your fuel."
+      },
+      {
+        "silenceDurationSeconds": 60
+      },
+      {
+        "instruction": "Take one final deep breath in, and as you exhale, set a single word as your intention for the morning — something like focus, presence, or calm. Carry that word with you as you open your eyes. You are ready."
+      }
+    ]
+  },
+  {
+    "id": "morning-002",
+    "title": "Sunrise Intention Setting",
+    "category": "morning",
+    "durationMinutes": 7,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Find a comfortable seat and close your eyes. Take three natural breaths, not forcing anything — just arriving. Feel the weight of your body supported beneath you. There is nothing to do in this moment except be present. Let the day wait just a little longer."
+      },
+      {
+        "instruction": "Bring to mind something small you are grateful for right now. Not an achievement or a milestone — something immediate. The warmth of the room, the fact that you woke up, the quiet before the noise begins. Let that appreciation settle into your chest. Breathe it in gently."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Now picture your day unfolding ahead of you like a path. See the morning, the afternoon, the evening. Where will you be? Who will you be with? Let a soft, honest vision of the day take shape — not perfect, just real and purposeful."
+      },
+      {
+        "instruction": "Within that picture, identify one moment today that matters most to you. It might be a meeting, a creative block you want to push through, a difficult conversation, or simply showing up with more patience. See yourself moving through that moment with clarity and ease."
+      },
+      {
+        "instruction": "Now ask yourself quietly: who do I want to be today? Not what you want to accomplish — but who. Patient, bold, curious, generous, focused? Let one quality rise to the surface. That is your identity for today. Breathe it in like it is already true."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Take a slow, full breath in, and as you exhale, let your hands open wide on your lap — a small physical gesture of readiness. You have set your gratitude, your vision, and your intention. Open your eyes when you are ready, and begin."
+      }
+    ]
+  },
+  {
+    "id": "morning-003",
+    "title": "Deep Morning Awakening",
+    "category": "morning",
+    "durationMinutes": 12,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Sit tall, close your eyes, and bring your awareness inward. Notice the texture of this moment — the sounds around you, the temperature of the air, the feeling of the surface beneath you. Your body has been in a state of deep rest. Right now, you are crossing the threshold from sleep into full wakefulness. Take your time. There is nowhere to rush."
+      },
+      {
+        "instruction": "Begin box breathing to shift your nervous system into an alert, calm state. Breathe in through your nose for four counts. Hold at the top for four counts. Exhale slowly for four counts. Hold at the bottom for four counts. Repeat this full cycle four times. With each round, feel your mind becoming clearer, sharper, more present — like fog lifting from a morning landscape."
+      },
+      {
+        "instruction": "Bring your attention to the top of your head. Slowly scan downward — your forehead, your jaw, your neck and throat. Notice where there is tension, and breathe into those places without forcing anything to change. Move down through your shoulders, your arms to your fingertips. Continue through your chest, your belly, your lower back. Down through your hips, your thighs, your knees, your calves, all the way to the soles of your feet. You have arrived fully in your body."
+      },
+      {
+        "instruction": "Bring your attention to the center of your chest — your heart space. Imagine a gentle warmth there, like morning sunlight falling through a window. With each inhale, let that warmth grow slightly. With each exhale, let it radiate outward — into your arms, your face, the space in front of you. This warmth is your capacity: for connection, for care, for doing what matters. Let it be present before the day begins."
+      },
+      {
+        "silenceDurationSeconds": 120
+      },
+      {
+        "instruction": "Shift your focus to your mind. What quality of thinking do you want to bring today? Clarity, creativity, focus, calm discernment? Picture your mind as a clear, still body of water — undisturbed, reflective, ready. Set an intention for how you will think today. When you feel pulled into distraction or reactivity, you can return to this image."
+      },
+      {
+        "instruction": "Now bring attention to your body as an instrument. What does your body need today to perform well — movement, rest, nourishment, breath? Make one small commitment to your physical self. Then shift to your relationships. Think of one person you will interact with today. How do you want to show up for them? What quality of presence do you want to offer?"
+      },
+      {
+        "instruction": "Hold all three intentions — mind, body, relationships — lightly in your awareness at once. Take a long, slow breath in, feeling the alignment of these three domains. As you exhale, let your hands press gently into your thighs, grounding the intentions into your body. Open your eyes. You have woken up fully. Proceed with intention."
+      },
+      {
+        "silenceDurationSeconds": 120
+      }
+    ]
+  },
+  {
+    "id": "morning-004",
+    "title": "Power Start Visualization",
+    "category": "morning",
+    "durationMinutes": 10,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Sit comfortably with your spine tall and your eyes closed. Take three deliberate breaths — slow, deep, and full. With each exhale, let your body settle and your mind clear. You are about to use one of your most powerful tools: your imagination. What you rehearse mentally, your nervous system begins to believe. Let's begin."
+      },
+      {
+        "instruction": "Recall a specific moment in your past when you performed at your best. It doesn't need to be dramatic — it could be a conversation that went exactly right, a problem you solved under pressure, a moment when you were completely in the zone. Bring that memory into focus. Where were you? What were you doing? Let the scene become vivid."
+      },
+      {
+        "instruction": "Now step back into that memory fully. Feel the physical sensations of that peak state — the posture, the energy in your body, the sharpness in your mind. Notice your breathing, your confidence, the quality of your focus. This state is real. It lives inside you. You are not imagining something foreign — you are remembering something true."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Anchor this state with a physical gesture — press your thumb and forefinger together, or make a quiet fist. As you hold this gesture, intensify the memory: the clarity, the capability, the ease. Take a breath in at the peak of this feeling. This anchor is yours. You can return to this state whenever you need it today."
+      },
+      {
+        "instruction": "Now bring to mind the single most important challenge or opportunity you will face today. See the situation clearly — where you are, who else is present, what is being asked of you. Step into that scene carrying your peak state with you. Feel your confidence, your groundedness, your readiness. Watch yourself navigate the moment with skill."
+      },
+      {
+        "instruction": "Fast forward to the end of your day. See yourself in the evening, having moved through today with purpose. Feel the quiet satisfaction of a day well lived — not perfect, but aligned. What does that feel like in your body? A sense of completion, of self-respect, of forward motion. Let that feeling be your pull."
+      },
+      {
+        "instruction": "Take a deep breath in, pressing your anchor gesture once more. Carry your peak state, your prepared response to today's challenge, and your vision of satisfaction forward with you. Open your eyes. You have already lived this day well once. Now go do it for real."
+      }
+    ]
+  },
+  {
+    "id": "morning-005",
+    "title": "Gratitude Activation",
+    "category": "morning",
+    "durationMinutes": 8,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Sit comfortably and close your eyes. Take two slow breaths to arrive. This session is about more than thinking grateful thoughts — it is about feeling gratitude as a physical state in your body. Gratitude, practiced deeply, shifts your nervous system, sharpens your perception, and primes you to notice more of what is good. Let's move through it together."
+      },
+      {
+        "instruction": "Start with your body. Bring your attention to your heart and lungs — the quiet, tireless rhythm of your breath and heartbeat. These systems have been working for you through the night without any effort on your part. Place one hand on your chest. Feel the warmth there. Let a quiet sense of appreciation for your physical life arise — not forced, just noticed."
+      },
+      {
+        "instruction": "Think of something small and immediate that you are grateful for today. Not your greatest blessing — something ordinary. A warm drink, the light in the room, the fact that you have a few minutes to sit quietly. Find it, and then breathe into it. Let the feeling expand slightly with each inhale. Notice where that feeling lives in your body — your chest, your stomach, the corners of your face."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Now bring to mind a person who has made a positive difference in your life — recently or long ago. See their face. Think of one specific thing they did or said. Let the warmth of that connection settle in your chest. You don't need to contact them or do anything. Simply feel the reality of being someone who is cared for and who cares for others. That is a form of wealth."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Turn your attention to your growth. Think of one difficult thing you have worked through — a challenge, a mistake you learned from, a habit you changed, a fear you faced. That struggle produced something in you. Acknowledge that. Feel gratitude not just for what is easy, but for what has made you more capable, more resilient, more yourself."
+      },
+      {
+        "instruction": "Take one long, slow breath in and let all three layers of gratitude — your body, your people, your growth — be present at once. As you exhale, set a quiet intention to notice at least three good things that happen today, no matter how small. Open your eyes. You are already ahead — you have started the day by choosing to see what is right."
+      }
+    ]
+  },
+  {
+    "id": "morning-006",
+    "title": "The One-Minute Reset",
+    "category": "morning",
+    "durationMinutes": 1,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Sit or stand tall. Close your eyes or soften your gaze. Take one slow, full breath in through your nose — fill your lungs completely, pause for just a moment at the top — then release it all through your mouth in one steady exhale. Feel your shoulders drop. Feel your mind clear. That breath just changed your state."
+      },
+      {
+        "instruction": "Choose one word for this moment. Not for the whole day — just right now. It might be calm, sharp, open, ready, or present. Let the first honest word that comes to you land. Hold it for two breaths. Let it settle into your body like a quiet instruction."
+      },
+      {
+        "instruction": "Open your eyes. Press your feet into the floor. You are here. You are ready. Begin."
+      }
+    ]
+  },
+  {
+    "id": "focus-001",
+    "title": "Clear Mind Focus",
+    "category": "focus",
+    "durationMinutes": 5,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Arrive at your workspace with intention. Sit upright, feet flat on the floor, hands resting on the desk or your lap. Take one slow look around your environment, then bring your gaze to a single point in front of you. You are here. You are ready to begin."
+      },
+      {
+        "instruction": "Take a full breath reset now. Inhale deeply through your nose for a count of four, filling your lungs completely. Hold for two counts. Then exhale fully through your mouth for a count of six, releasing any residual tension from your body. Repeat this twice more. With each exhale, let your mind become a little quieter."
+      },
+      {
+        "instruction": "Identify the single task you will work on. Not your list — just one item. Say it silently to yourself with precision: what is it, and what does done look like? Let that task take shape clearly in your mind. Nothing else needs your attention right now. Everything else can wait."
+      },
+      {
+        "instruction": "Zero in. Take one final slow breath and, as you exhale, feel your attention narrow — like a lens coming into sharp focus. Your mind is clear, your direction is set. Open your eyes fully, bring your hands to the keyboard or your tools, and begin."
+      }
+    ]
+  },
+  {
+    "id": "focus-002",
+    "title": "Work Zone Entry",
+    "category": "focus",
+    "durationMinutes": 6,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Sit comfortably and close your eyes. Before you do anything else, take a moment to notice where your mind is right now. Is it still in a conversation, scrolling through something, planning ahead? Simply acknowledge what is present — no judgment. You are about to leave that space and enter your work zone."
+      },
+      {
+        "instruction": "Begin the 4-2-6 breath pattern to lower arousal and prepare your nervous system for focused effort. Inhale through your nose for four counts. Hold for two counts. Exhale slowly through your nose for six counts. The extended exhale activates your parasympathetic system, reducing mental noise. Complete four full rounds of this pattern now."
+      },
+      {
+        "instruction": "Visualize a clear mental boundary. Picture a threshold — a doorway, a line, a gate — whatever feels natural to you. On one side is everything else: messages, errands, worries, background noise. On the other side is your work zone: calm, clean, and focused. See yourself stepping through that threshold now. Behind you, the noise settles. Ahead, there is space to think."
+      },
+      {
+        "instruction": "Name the concrete output you are here to produce. Not a vague intention, but a specific deliverable. A finished draft. A solved problem. A completed call. Hear yourself say it clearly in your mind. This is your anchor. This is what this session is for."
+      },
+      {
+        "instruction": "Take one grounding breath — in through the nose, out through the mouth — and open your eyes. You have crossed the threshold. You are in your work zone. Begin with the first action that moves you toward that output."
+      }
+    ]
+  },
+  {
+    "id": "focus-003",
+    "title": "Flow State Activation",
+    "category": "focus",
+    "durationMinutes": 10,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Find a comfortable, upright position and close your eyes. Before you can enter flow, your mind needs space. Take sixty seconds now to do a mental dump. Let every open loop, every nagging thought, every unfinished item surface and pass by — like clouds moving through an open sky. You are not solving anything right now. You are simply clearing the runway."
+      },
+      {
+        "instruction": "Continue to breathe naturally and bring your attention fully to the present moment. Notice the contact of your body with the chair. Notice the temperature of the air. Notice the subtle sounds around you. Let each breath anchor you more completely into right now. The past and future are not here. Only this moment is."
+      },
+      {
+        "instruction": "Now bring to mind a memory of peak flow — a time when you were so absorbed in a task that time disappeared. It could be from work, a creative pursuit, a sport, anything. Recall the quality of that state: the effortless concentration, the sense that you and the work were one thing. Feel the texture of that experience in your body. You have been there. You know the way."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Begin box breathing to synchronize your mental state. Inhale for four counts. Hold for four counts. Exhale for four counts. Hold for four counts. This is one box. Complete four full boxes, keeping your attention steady on the count. If your mind wanders, return without frustration. Each return is a rep — it is training, not failing."
+      },
+      {
+        "instruction": "Identify the task you are entering. Now find the edge of your curiosity about it. What is genuinely interesting or uncertain within it? What would you like to discover? Flow does not enter through obligation — it enters through engagement. Locate the part of this work that pulls you forward rather than pushes you."
+      },
+      {
+        "instruction": "Calibrate your challenge level. Flow lives at the intersection of high skill and high challenge. If this task feels too easy, name one way to raise the bar. If it feels overwhelming, identify the smallest meaningful thread you can pull. Find the edge — the place where you have to stretch just a little. That edge is the doorway."
+      },
+      {
+        "instruction": "Take three slow, deliberate breaths. With each exhale, release the need to manage or monitor yourself. Flow does not happen under surveillance — it happens when you let go into the work. Open your eyes, bring your hands to your tools, and start with the first action. Trust that if you engage fully, the state will follow."
+      }
+    ]
+  },
+  {
+    "id": "focus-004",
+    "title": "Deep Concentration",
+    "category": "focus",
+    "durationMinutes": 8,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Sit upright and close your eyes. Deep concentration is a trained capacity, not a mood. This session is attention training. Begin with counting breath to establish baseline focus. Inhale naturally, and as you exhale, count silently: one. Inhale, exhale: two. Continue counting up to ten, then return to one. If you lose count, simply return to one without reaction. Run three full cycles of ten before moving on."
+      },
+      {
+        "instruction": "With your attention now stabilized, bring awareness to the front of your skull — the area just behind your forehead. This is your prefrontal cortex: the seat of planning, decision-making, and sustained attention. Visualize it becoming more active, more available. Picture a clean, bright signal there — steady, strong, undistracted. You are not forcing anything. You are simply inviting that part of your mind online."
+      },
+      {
+        "instruction": "Identify the task waiting for you. Now determine its type. Is this creative work — generative, open-ended, requiring divergent thinking? Analytical work — logical, structured, requiring precision? Or detail work — careful, sequential, requiring vigilance? Name the type clearly. Each demands a different mental posture, and knowing which one you need helps you step into it accurately."
+      },
+      {
+        "instruction": "Calibrate your mental posture to the task type. For creative work: hold your mind loosely, let associations come, stay curious and unguarded. For analytical work: narrow your focus, look for logical structure, move step by deliberate step. For detail work: slow down, operate with patience, treat each unit as important. Take a moment now to feel into the posture your task requires."
+      },
+      {
+        "instruction": "Prepare your distraction return protocol. You will be distracted during this session — that is not failure, it is certainty. Decide now how you will respond when it happens. The moment you notice your attention has drifted, you will say internally: return. No self-criticism. No extended detour. Just: return. Practice it once now — let your mind wander for five seconds, then bring it back with a single silent word. That is the protocol."
+      },
+      {
+        "instruction": "Take one final centering breath — deep in through the nose, long and complete out through the mouth. Feel your attention settle like sediment in still water: clear, layered, ready. Open your eyes. Begin your task. Every time you return from distraction, your concentration deepens. This is the work."
+      }
+    ]
+  },
+  {
+    "id": "focus-005",
+    "title": "Single Task Focus",
+    "category": "focus",
+    "durationMinutes": 7,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Sit quietly and close your eyes. Before you begin, understand what you are committing to. Research on cognitive performance shows that every time you switch tasks, your brain pays a switching cost — a lag in reorientation that can take fifteen to twenty minutes to fully recover from. Multitasking is not efficiency; it is distributed underperformance. This session is about doing one thing completely. Take a breath and let that land."
+      },
+      {
+        "instruction": "Choose your single task for this session. Not your top three. One. Say it clearly and specifically in your mind — what it is, what a completed version looks like, and roughly how long you will give it. Feel the simplicity of that commitment. You are not managing a list right now. You are doing one thing."
+      },
+      {
+        "instruction": "Build your distraction shield. Visualize a boundary around you — a field, a wall, a circle of quiet — that holds your focus in and keeps interruptions out. Notifications, side thoughts, other tasks: picture them approaching the boundary and simply deflecting. They are not gone — they are waiting. But for the duration of this session, they cannot reach you. See that shield clearly and feel it as solid."
+      },
+      {
+        "instruction": "Breathe into single-task mode. Inhale for four counts. Exhale for six. Do this three times. With each exhale, release the pull of everything else on your list. Feel the relief of not needing to hold it all simultaneously. Right now, there is only this one thread. Your whole mind can go there."
+      },
+      {
+        "instruction": "Make your commitment explicit. Say to yourself: for the next block of time, I am giving all of my attention to this one task. I will not switch. If something else arises, I will note it and return. I trust that one thing done deeply is worth more than many things done partially. Feel the clarity of that intention. Now open your eyes and begin — one task, full presence."
+      }
+    ]
+  },
+  {
+    "id": "focus-006",
+    "title": "End-of-Day Wind Down",
+    "category": "focus",
+    "durationMinutes": 6,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Your work session is ending. Before you close anything or move on, pause. Sit back from your desk, let your hands rest in your lap, and take one full breath. You have done work today. This moment is a deliberate transition — not an abrupt stop, but a clean close. Give yourself sixty seconds to fully arrive in this moment before you do anything else."
+      },
+      {
+        "instruction": "Begin the work closure ritual. Call to mind three things you completed today — finished, moved forward, or meaningfully contributed to. They do not have to be large. They have to be real. Name each one clearly in your mind, and as you do, let yourself register it as done. Not almost done. Not good enough. Done. This act of acknowledgment signals to your brain that it is safe to release these threads."
+      },
+      {
+        "instruction": "Clear your mental desk. Visualize your workspace — physical or mental — and see it as a desk covered with the day's open items: tasks in progress, unanswered questions, tomorrow's concerns. Now, one by one, pick each item up and set it in a drawer. The drawer exists. It will hold everything safely. You are not abandoning these things — you are placing them down with the intention to return. Close the drawer. The desk is clear."
+      },
+      {
+        "instruction": "Begin the transition breath sequence. Inhale slowly through your nose for five counts, filling your chest and belly. Hold for three counts. Exhale fully through your mouth for seven counts, letting your shoulders drop and your jaw unclench. This is your physiological signal: work mode is ending, rest mode is beginning. Complete three rounds of this breath, feeling a distinct shift in your body's tempo with each cycle."
+      },
+      {
+        "instruction": "Arrive in the completion mindset. You did not finish everything — no one does. But you showed up, and you contributed, and that is what today asked of you. Take one final slow breath and, as you exhale, let the day be what it was. Not more, not less. Close your eyes for five seconds, feel the ground beneath you, and when you open them, you are done with work. The rest of your day is yours."
+      }
+    ]
+  },
+  {
+    "id": "anxiety-001",
+    "title": "Quick Calm Reset",
+    "category": "anxiety",
+    "durationMinutes": 4,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Wherever you are right now, let yourself stop. You don't need to fix anything in this moment. Just let your body be still — feet on the floor, hands resting somewhere comfortable, jaw unclenched. You're allowed to pause. Take one slow breath in through your nose, and let it go without effort. Good. You're here."
+      },
+      {
+        "instruction": "Now let's use a simple breath pattern to gently signal safety to your nervous system. Breathe in through your nose for a count of four — one, two, three, four. Hold softly at the top for just one count. Then exhale slowly through your mouth for a count of seven — letting the breath drift out longer than it came in. That extended exhale is what tells your body it's safe to relax. Try it again: in for four… hold for one… out for seven. Slow, easy, without force."
+      },
+      {
+        "instruction": "Let's ground you here with your five senses. Notice five things you can see right now — shapes, colors, light. Four things you can physically feel — the weight of your body, the texture beneath your hands, the temperature of the air. Three things you can hear, even faint background sounds. Two things you can smell, even if subtle. And one thing you can taste. Each sense is a quiet reminder: you are here, you are present, and right now, in this exact moment, you are okay."
+      },
+      {
+        "instruction": "Take one final breath — in through your nose, long and easy, and out through your mouth with a soft sigh. Feel how your body has shifted, even just slightly. Carry this feeling with you as you return to your day. You can come back to this reset anytime — the pause, the breath, the senses. It's always available to you."
+      }
+    ]
+  },
+  {
+    "id": "anxiety-002",
+    "title": "Breath Anchor",
+    "category": "anxiety",
+    "durationMinutes": 6,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Find a comfortable position and let your eyes close, or soften your gaze downward. Take a moment to arrive — there's nowhere else you need to be right now. Notice whatever is present without needing to change it. If you're feeling anxious or restless, that's completely okay. We're not here to push anything away. We're just going to breathe together."
+      },
+      {
+        "instruction": "Place one hand on your chest and one hand on your belly, just below your navel. As you take a slow breath in, see if you can invite the lower hand to rise first — the belly expanding gently outward before the chest lifts. This is diaphragmatic breathing, and it's one of the most natural ways to calm your body. If only your chest moves, that's fine — just notice it without judgment, and gently invite the breath a little deeper with each round."
+      },
+      {
+        "instruction": "Now let your hands rest wherever they're comfortable and simply follow the natural rhythm of your breath. As thoughts arise — and they will — I'd like you to picture them as small boats drifting down a wide, slow river. You're sitting on the bank, watching. The boats come, they float by, they go. You don't need to climb into each one. You don't need to stop them. Just notice them passing and return your attention gently to the feeling of your breath."
+      },
+      {
+        "silenceDurationSeconds": 60
+      },
+      {
+        "instruction": "Each time you notice you've drifted — that you've climbed into a boat and floated away — simply count 'one' and come back to your breath. Then two. Then three. You're not failing when your mind wanders; that's what minds do. The practice is in the returning. Count up to ten returns, then start again from one. There's no goal here except to keep coming back, as many times as needed, without frustration."
+      },
+      {
+        "instruction": "Let your counting soften now and just breathe naturally, without any effort to control it. Feel the anchor of your breath — always here, always available, always bringing you home. When you're ready, let your eyes gently open. Take this sense of groundedness with you into whatever comes next, knowing your breath is always one conscious moment away."
+      }
+    ]
+  },
+  {
+    "id": "anxiety-003",
+    "title": "Full Body Release",
+    "category": "anxiety",
+    "durationMinutes": 15,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Find a place where you can lie down or sit in a fully supported position. Let yourself settle in — adjusting anything that isn't quite comfortable, giving yourself permission to take up the space you need. Close your eyes. You are safe here. This time belongs entirely to you. Take three slow, unhurried breaths, and with each exhale, let a little more of the day's weight begin to soften."
+      },
+      {
+        "instruction": "We're going to travel slowly through your body, inviting each part to release tension it may have been quietly holding. Let's begin at your feet. Curl your toes gently downward, creating mild tension in the soles of your feet and your arches. Hold for a breath — then release completely. Let your feet fall open, heavy and warm. Now flex your feet upward, tensing the shins and the tops of the feet. Hold — and let go. Feel the contrast between tension and ease. Rest here for a moment and breathe."
+      },
+      {
+        "instruction": "Moving upward now to your calves and thighs. Press your heels gently down as if into soft earth, engaging the backs of your calves. Hold for a few seconds, then release. Now squeeze your thighs together, feeling the muscles along your inner legs activate. Hold — and let go, allowing your legs to rest heavily against the surface beneath you. Your lower body is beginning to melt. Let it be heavy. It doesn't need to do anything right now."
+      },
+      {
+        "instruction": "Bring your attention to your core — your belly, your lower back, the muscles that wrap around your middle. Take a breath in, and as you exhale, gently draw your navel inward, engaging the abdominal wall. Hold softly — then fully release. Take a moment to notice your belly rising and falling freely with your breath. No holding. No bracing. Just the natural, easy rhythm of a body that is allowed to rest."
+      },
+      {
+        "instruction": "Now your arms and hands. Clench both hands into loose fists, feeling the tension travel up through your forearms. Hold — then open your hands wide, fingers spreading apart. Let them fall open, palms soft. Next, pull your shoulders up toward your ears, feeling the familiar tightness there. Hold — and then drop them down completely, letting them fall away from your ears. Roll them back ever so slightly and feel your chest open. Breathe into that space."
+      },
+      {
+        "instruction": "Finally, your face — the place that often holds more tension than we realize. Scrunch every muscle inward toward the center of your face: eyes squeezed shut, nose wrinkled, lips pressed together, jaw clenched. Hold everything tight for a moment — and then release. Let your jaw drop slightly open. Let your brow smooth out. Let your eyes rest softly in their sockets. Feel the skin of your face relax, as if it's becoming heavier, warmer, more still."
+      },
+      {
+        "instruction": "Now let your whole body rest, from the soles of your feet to the top of your head — completely supported, completely at ease. Scan slowly from feet to crown and notice: is there anywhere still holding? If you find a place of tension, simply breathe into it with curiosity rather than urgency. You've done the work. You can trust your body to continue releasing on its own. Rest here for as long as you like. When you're ready to return, bring gentle movement back to your fingers and toes, take a deeper breath, and open your eyes slowly."
+      },
+      {
+        "silenceDurationSeconds": 180
+      }
+    ]
+  },
+  {
+    "id": "anxiety-004",
+    "title": "Anxiety Dissolution",
+    "category": "anxiety",
+    "durationMinutes": 12,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Settle into a comfortable position and close your eyes. Take a breath in, and a breath out. We're going to do something a little different in this session — instead of trying to make anxiety go away, we're going to gently turn toward it. Not to feed it, but to understand it. You're safe here. Whatever you're feeling is welcome. You don't have to be different than you are right now."
+      },
+      {
+        "instruction": "Take a moment to honestly check in: where do you notice anxiety or stress living in your body right now? Perhaps it's a tightness in your chest, a knot in your stomach, tension along your shoulders, or a buzzing restlessness in your limbs. See if you can locate the place where it feels most present. You're not diagnosing or fixing — just noticing. Place a gentle hand there if that feels natural. Name what you find: 'there is tightness here,' 'there is heat here.' Just acknowledge it."
+      },
+      {
+        "instruction": "Now, instead of breathing away from the sensation, I'd like to invite you to breathe into it. Imagine your breath as something warm and spacious — like light filling a room. As you inhale, let that warmth travel directly to the place where you feel the anxiety. As you exhale, imagine the edges of that sensation softening slightly — not disappearing, just loosening. Breathe in toward it. Breathe out and release just a little. You're not fighting it. You're giving it room."
+      },
+      {
+        "silenceDurationSeconds": 120
+      },
+      {
+        "instruction": "As you continue breathing into the sensation, let's gently explore where this feeling might be coming from. Anxiety is often your mind and body working hard to protect you — alerting you to something that felt or feels threatening. It isn't broken. It isn't wrong. It is protective energy that may have misfired, or that has nowhere to go right now. Can you offer it just a small amount of understanding? Something like: 'I see you. You're trying to help. I'm okay right now.'"
+      },
+      {
+        "instruction": "Stay with the breath and the sensation together. Notice if anything has shifted — even slightly. Has the sensation changed shape, moved, or softened? Whatever is happening is okay. If it has intensified, know that this sometimes happens when we stop running from something — it flares briefly, and then, when it realizes it no longer needs to shout for your attention, it can begin to quiet. Keep breathing. Keep staying."
+      },
+      {
+        "silenceDurationSeconds": 120
+      },
+      {
+        "instruction": "Now bring a hand to your heart and let yourself offer some reassurance — not to fix yourself, but to be with yourself. Silently or gently aloud, offer these words: 'I am doing the best I can. I am safe right now. This feeling will pass. I am with myself through it.' Let the words settle slowly, like stones dropped into still water. You don't have to believe them completely — just try them on, and see how they feel."
+      },
+      {
+        "instruction": "Take three long, slow breaths — deeper than the ones before. On each exhale, imagine the sensation in your body becoming just a little more diffuse, spreading out and thinning, like ink dissolving in water. Not gone, but no longer concentrated. Let your hand fall and rest wherever is comfortable. Notice the quality of the space inside you now — perhaps a little softer, a little wider, a little more still. When you're ready, open your eyes gently. You faced something difficult today, and you stayed. That matters."
+      }
+    ]
+  },
+  {
+    "id": "anxiety-005",
+    "title": "Physiological Sigh Reset",
+    "category": "anxiety",
+    "durationMinutes": 3,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Find a comfortable position — seated or lying down — and let your shoulders drop away from your ears. We're going to use one of the most powerful breathing techniques your body already knows how to do: the physiological sigh. You've done this naturally your whole life — that involuntary double-inhale you sometimes take when you've been crying or deeply stressed. Research shows this specific breath pattern deflates tiny air sacs in the lungs and is the fastest known way to reduce stress in real time. We're going to do it intentionally, five rounds. There's no rush."
+      },
+      {
+        "instruction": "Here's how it works: take a normal inhale through your nose — and then, at the top of that inhale, take one short extra sniff of air on top of it, drawing in just a little more. Your lungs will feel full, maybe even slightly overfull. That's right. Now open your mouth and let the exhale go — long, slow, completely unforced, until your lungs feel empty. Let's do five rounds together. Inhale through the nose — then a short sniff on top — then a long, slow exhale through the mouth. Again. And again. Let each exhale be a release, not an effort. By the fifth round, you may already feel a noticeable shift in your nervous system — a softening, a slowing, a sense of the body coming back to baseline."
+      },
+      {
+        "instruction": "Now let your breath return to its natural rhythm — no more control needed. Notice how your body feels compared to when you started. The physiological sigh works because the extended exhale activates your parasympathetic nervous system — the rest-and-digest response — dropping your heart rate and signaling that the threat has passed. You can use this anytime: before a difficult conversation, in a moment of panic, or simply as a midday reset. One double inhale and a long exhale is enough to begin shifting the tide. Take a final natural breath, and when you're ready, gently open your eyes."
+      },
+      {
+        "silenceDurationSeconds": 45
+      }
+    ]
+  },
+  {
+    "id": "anxiety-006",
+    "title": "Loving-Kindness for Self",
+    "category": "anxiety",
+    "durationMinutes": 10,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Find a comfortable, supported position and allow your eyes to close. Take a few easy breaths and let yourself arrive. This practice is called loving-kindness — metta in the ancient Pali tradition — and today we'll use it as a way to soften the harsh edges that anxiety often turns against ourselves. You don't need to feel loving to begin. You don't need to feel calm. You just need to be willing to try, and that is enough."
+      },
+      {
+        "instruction": "We'll begin not with yourself, but with someone easier — someone you feel warmth toward without complication. This might be a close friend, a child, a pet, someone who has shown you kindness. Let an image of them come gently to mind. Picture them clearly, and as you hold them in your awareness, begin to silently offer them these wishes: 'May you be well. May you be happy. May you be free from suffering. May you be at peace.' Let the words be slow, unhurried, sincere. Feel the warmth of genuinely wishing good things for this person."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Now, keeping some of that warmth in your chest, gently shift the focus to yourself. For many of us, this is where it gets harder — self-compassion can feel unfamiliar or even uncomfortable, especially when anxiety has been telling us we are not good enough, not doing enough, not safe enough. Notice whatever arises without judging it. Then, as gently as you can, begin to offer yourself the same wishes: 'May I be well. May I be happy. May I be free from suffering. May I be at peace.' You don't have to feel it fully yet. Just say the words to yourself, like planting seeds in soil."
+      },
+      {
+        "instruction": "Place a hand on your heart if that feels grounding. Breathe slowly and continue offering the phrases to yourself: 'May I be well. May I be happy. May I be free from suffering. May I be at peace.' If your inner critic speaks up — if a voice says 'you don't deserve this' — notice it with curiosity rather than agreement. That voice is not the truth of you. It is a habit, often born from old fear. You can acknowledge it and gently return. 'May I be well. May I be at peace.'"
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Now let's extend this outward. Bring to mind anyone else who might be struggling today — someone you know, or even just the broad human experience of anxiety that so many share. Offer them the same phrases: 'May you be well. May you be happy. May you be free from suffering. May you be at peace.' Feel how offering kindness to others and to yourself are not in competition — one flows naturally into the other."
+      },
+      {
+        "instruction": "Return now to yourself one final time. Take a slow, deep breath in — and as you exhale, let the words settle into your body like warmth: 'May I be well. May I be at peace.' Sit quietly for a moment, simply breathing, with your hand on your heart if it's still there. Notice whether anything feels even slightly softer — even a fraction. That fraction is real. It is the beginning of something. Self-compassion is not weakness. It is how anxious hearts learn, slowly and gently, that they are allowed to rest. When you're ready, open your eyes."
+      }
+    ]
+  },
+  {
+    "id": "sleep-m-001",
+    "title": "Bedtime Wind Down",
+    "category": "sleep",
+    "durationMinutes": 8,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Allow yourself to settle into the bed beneath you. Feel the mattress receiving your weight, the pillow cradling your head. You don't have to go anywhere. You don't have to do anything. This moment belongs entirely to rest. Let your eyes close softly, without effort, and simply arrive here — in this bed, in this quiet."
+      },
+      {
+        "instruction": "Take a slow, natural breath in through your nose... and let it go with a gentle sigh through your mouth. Nothing needs your attention right now. Whatever happened today, whatever is waiting for tomorrow — none of it requires anything from you in this moment. You have done enough. You can set it all down now."
+      },
+      {
+        "instruction": "Imagine a slow, gentle stream flowing through a forest. The water is calm, unhurried. If a thought drifts into your mind — a worry, a memory, something you forgot to do — simply place it on a leaf and watch it float away downstream. You don't need to chase it. You don't need to solve it. Just let it drift. Another leaf is always ready for the next thought."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "Return to your breath. Don't try to change it — just notice it. Notice how the inhale comes naturally, without effort. Notice how the exhale softens you a little more each time. With every breath out, feel your body growing heavier, sinking deeper into the warmth of your bed. Your shoulders... your back... your hips... all releasing, all letting go."
+      },
+      {
+        "instruction": "Let the quiet settle around you like a soft blanket. There is nothing to figure out, nothing to remember. You are safe. You are warm. You are allowed to rest completely. Let sleep come in its own time, in its own way. Simply remain here — soft, still, and at ease — breathing slowly, drifting gently toward sleep."
+      },
+      {
+        "silenceDurationSeconds": 90
+      }
+    ]
+  },
+  {
+    "id": "sleep-m-002",
+    "title": "Body Scan Relaxation",
+    "category": "sleep",
+    "durationMinutes": 10,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Lie down in a comfortable position and allow your body to be completely supported. Close your eyes. Take two or three slow, deep breaths, letting each exhale carry away any tension you've been holding. We are going to travel gently through the body, inviting each part to soften and let go. There is nowhere to rush. Just follow along at a slow, easy pace."
+      },
+      {
+        "instruction": "Bring your awareness down to your feet. Notice your toes, the soles of your feet, your heels. Don't try to move them — just feel them. Imagine a soft warmth spreading into your feet, like they are resting in a pool of gentle sunlight. With your next exhale, let any tightness in your feet dissolve. Feel them grow heavy and still. Let them sink."
+      },
+      {
+        "silenceDurationSeconds": 60
+      },
+      {
+        "instruction": "Now allow that warmth to travel slowly upward into your calves, your shins, your knees. Feel the muscles of your lower legs softening, releasing any grip they've been holding all day. Your legs have carried you faithfully today. Now they can rest. Let them be heavy. Let them sink into the bed beneath you, completely at ease."
+      },
+      {
+        "instruction": "The warmth continues upward into your thighs and hips. Let the large muscles of your thighs go completely loose and limp. Feel your hips widen slightly as they release — the outer hips, the inner thighs, everything just melting into stillness. Your lower body is now heavy, warm, and wonderfully relaxed."
+      },
+      {
+        "silenceDurationSeconds": 60
+      },
+      {
+        "instruction": "Bring your attention to your abdomen. Notice the gentle rise and fall with each breath. With every exhale, let your belly soften a little more. Allow your lower back to release into the mattress. Now feel the relaxation spreading across your chest — each breath out softening the ribs, the sternum, the space around your heart. Let it all be easy."
+      },
+      {
+        "silenceDurationSeconds": 60
+      },
+      {
+        "instruction": "Feel the warmth moving down your arms — into your upper arms, your elbows, your forearms, your wrists. Let your hands uncurl gently. Your fingers may tingle softly as they relax. Let your arms be heavy now, resting beside you without effort, completely surrendered to the support beneath them."
+      },
+      {
+        "instruction": "Finally, bring your attention to your face. Soften the muscles around your eyes — let there be space behind them. Unclench your jaw, letting your teeth part slightly, your tongue resting softly. Smooth the space between your brows. Let your scalp loosen. Your whole body now, from the tips of your toes to the crown of your head, is soft, warm, and deeply at rest. Simply remain here, breathing gently, and let sleep find you."
+      },
+      {
+        "silenceDurationSeconds": 90
+      }
+    ]
+  },
+  {
+    "id": "sleep-m-003",
+    "title": "Deep Sleep Descent",
+    "category": "sleep",
+    "durationMinutes": 15,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Lie still and close your eyes. Take a long, slow breath in through your nose... hold it gently for just a moment... and release it completely through your mouth. Let that exhale be a letting go — of the day, of your thoughts, of any effort. You are here to descend into deep, restorative sleep. There is nothing you need to do except allow it. Begin with another slow, unhurried breath."
+      },
+      {
+        "instruction": "We will move through the body with a simple breathe-and-release. Inhale gently and, as you do, lightly tense your feet and calves — just a small squeeze. Now exhale fully and release everything. Feel the difference — the contrast between holding and letting go. Do the same with your thighs and hips: a gentle inhale, a slight tightening... and then exhale, release. Let them fall completely limp. Now your abdomen and lower back: inhale, draw in slightly... and exhale, release it all. Finally your shoulders and hands: inhale, lift them slightly toward tension... and exhale, let them drop. Your body is now noticeably softer."
+      },
+      {
+        "instruction": "Imagine you are lying on a very soft, thick cloud. With each breath out, feel yourself sinking slowly, gently, into its warmth and depth. The cloud holds you perfectly — you are completely safe. As you sink, you pass through one soft layer, then another, and another. Each layer is warmer, quieter, more still. You are not falling — you are being received. Each exhale takes you one layer deeper into rest."
+      },
+      {
+        "instruction": "Somewhere below, there is a place that belongs only to you — a place of absolute peace. It might be a room, a forest clearing, a quiet shore, or simply a warm and formless light. Let an image arise without forcing it. Notice what it looks like, what it feels like, what sounds are there — or if there is only silence. You are welcome here. This place has been waiting for you. Let yourself arrive."
+      },
+      {
+        "silenceDurationSeconds": 180
+      },
+      {
+        "instruction": "In this safe place, allow your body to feel even heavier — not uncomfortably heavy, but pleasantly so. The kind of heaviness that tells you you are deeply relaxed, deeply safe. Your eyelids are heavy. Your limbs are heavy. Even your thoughts are growing slow and soft, like clouds drifting apart to reveal open sky."
+      },
+      {
+        "silenceDurationSeconds": 180
+      },
+      {
+        "instruction": "You may begin to notice the edges of sleep approaching — perhaps fleeting images, colors, or sounds that don't quite make sense. This is the threshold, the beautiful doorway between waking and sleep. Do not try to hold onto them, and do not try to push them away. Simply observe, with soft and drowsy curiosity, as they arise and dissolve. You are very close now."
+      },
+      {
+        "instruction": "There is nothing more to do. No step to follow, no breath to count. Simply rest in the warmth and stillness you have created. Your breath continues on its own. Your body knows how to sleep — it has always known. You are safe, you are held, and you are perfectly free to let go completely. Drift now... gently... deeply... into sleep."
+      },
+      {
+        "silenceDurationSeconds": 180
+      }
+    ]
+  },
+  {
+    "id": "sleep-m-004",
+    "title": "Dream Preparation",
+    "category": "sleep",
+    "durationMinutes": 12,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Settle into your bed and close your eyes. Take a slow, deep breath in through your nose... and release it through your mouth as a long, quiet sigh. Let that sigh carry with it the weight of the day. Today is complete. Whatever happened — whatever you finished, whatever you didn't, whatever you felt — it has been lived. You don't need to carry any of it further tonight. One more slow, sighing breath: in... and out. The day is done."
+      },
+      {
+        "instruction": "Let your mind drift back over the day, gently and without judgment — as if you are watching a slow film from a comfortable distance. You might see a moment from this morning, an interaction, something you felt. As each memory arises, simply acknowledge it with a soft inner nod: yes, that happened. You don't need to fix it, improve it, or replay it. Offer it a quiet kindness, the way you might to a tired friend. Well done. That was enough. And let it go."
+      },
+      {
+        "silenceDurationSeconds": 120
+      },
+      {
+        "instruction": "Now, if there are any worries or lingering thoughts that feel unfinished — anything pulling at the edges of your mind — imagine a small, beautiful box beside you. It has a secure lid. One by one, gently place each worry inside. You are not dismissing them. You are simply saying: not tonight. I will return to you tomorrow if I need to. When you have placed everything that needs placing, close the lid softly. The box will be there in the morning."
+      },
+      {
+        "instruction": "Now we will breathe together in a pattern that signals your nervous system it is safe to sleep deeply. Breathe in slowly through your nose for a count of four. Hold gently for a count of seven. And release through your mouth for a count of eight — slow and smooth. Let's do this twice more. In for four... hold for seven... and out for eight. Feel the stillness that follows."
+      },
+      {
+        "instruction": "Your mind and body are beautifully prepared for rest. Let your thoughts grow quiet and loose — not blank, but unheld, like leaves drifting in still air. You may notice soft images beginning to form at the edges of your awareness: shapes, colors, fleeting scenes that have no particular meaning. These are the first gentle signs of sleep arriving. Welcome them. They are the doorway into dreaming."
+      },
+      {
+        "silenceDurationSeconds": 120
+      },
+      {
+        "instruction": "Let those images drift and shift as they wish, without your direction. You don't need to create anything. You don't need to understand anything. Simply watch with drowsy, open curiosity as your mind begins to weave the fabric of your night's rest. Each breath carries you a little further from the waking world and a little deeper into the soft, warm dark of sleep."
+      },
+      {
+        "silenceDurationSeconds": 120
+      },
+      {
+        "instruction": "You have done everything you need to do. Your body is relaxed. Your mind is quiet. The day has been released. You are safe, and held, and completely free. Let sleep take you now — gently, gradually, completely. Sweet dreams are forming just beyond the threshold of your awareness. Drift toward them softly, without effort, breathing slowly... growing still... letting go."
+      }
+    ]
+  },
+  {
+    "id": "sleep-m-005",
+    "title": "NSDR (Non-Sleep Deep Rest)",
+    "category": "sleep",
+    "durationMinutes": 10,
+    "isPro": false,
+    "steps": [
+      {
+        "instruction": "Lie down in a comfortable position — on your back if possible — with your arms resting a little away from your sides and your legs slightly apart. Close your eyes. Take a slow breath in, and a slow breath out. For this practice, the goal is not to fall asleep. The goal is simply deep rest. Whatever happens — whether you drift off or remain awake throughout — is perfectly fine. You cannot do this wrong. Simply lie still and follow the gentle movement of awareness."
+      },
+      {
+        "instruction": "We will rotate awareness through different parts of the body in sequence. This is not a relaxation exercise — you are simply noticing each part, briefly, and moving on. There is no need to change anything you feel. Just touch each area lightly with your attention, like a soft light passing over the body. Begin now. Right thumb. Right index finger. Right middle finger. Right ring finger. Right little finger. Right palm. Back of the right hand. Right wrist. Right forearm. Right elbow. Right upper arm. Right shoulder."
+      },
+      {
+        "instruction": "Continue moving awareness through: right armpit. Right side of the chest. Right side of the waist. Right hip. Right thigh — front and back. Right kneecap. Right calf. Right ankle. Right heel. Sole of the right foot. Right big toe. Right second toe. Right third toe. Right fourth toe. Right little toe. Pause for a moment — sense the whole right side of the body at once. Then let that awareness go."
+      },
+      {
+        "instruction": "Now the left side. Left thumb. Left index finger. Left middle finger. Left ring finger. Left little finger. Left palm. Back of the left hand. Left wrist. Left forearm. Left elbow. Left upper arm. Left shoulder. Left armpit. Left side of the chest. Left side of the waist. Left hip. Left thigh. Left kneecap. Left calf. Left ankle. Left heel. Sole of the left foot. Left big toe. Left second toe. Left third toe. Left fourth toe. Left little toe. Sense the whole left side, then release."
+      },
+      {
+        "instruction": "Now bring awareness to your face. The top of your head. Your forehead. Your right eyebrow, then your left eyebrow. The space between them. Your right eyelid. Your left eyelid. Your right cheek. Your left cheek. The tip of your nose. Your upper lip. Your lower lip. Your chin. Your jaw. Your right ear. Your left ear. The back of your head where it rests on the pillow. The whole face together. The whole head together. Then, the entire body at once — sense it as one whole, resting, warm and still."
+      },
+      {
+        "instruction": "Remain here now in open, effortless stillness. Let your awareness rest without landing on anything in particular. If thoughts arise, let them pass through without engagement. If sensations come, simply note them and return to the quiet openness. Your nervous system is replenishing itself right now — deeply and completely. This rest is real and restorative, whether you are asleep or awake. Stay here as long as you like, breathing softly, doing nothing at all."
+      },
+      {
+        "silenceDurationSeconds": 120
+      }
+    ]
+  },
+  {
+    "id": "sleep-m-006",
+    "title": "Let Go of the Day",
+    "category": "sleep",
+    "durationMinutes": 8,
+    "isPro": true,
+    "steps": [
+      {
+        "instruction": "Settle into your bed, close your eyes, and take a slow, releasing breath. Tonight we are going to gently interrupt the mind's habit of replaying and planning, and guide it instead into the soft randomness that leads to sleep. There is nothing serious here — only ease. Let your body relax into the mattress, and let whatever you were thinking about begin to soften and blur at the edges."
+      },
+      {
+        "instruction": "If any worries or unfinished thoughts are circling, I want you to make them a small, quiet promise: I will come back to you tomorrow if I need to. You are not being ignored — you are being set aside with care. Imagine writing each concern on a slip of paper and placing it in a small drawer beside the bed. You can open that drawer in the morning. For tonight, the drawer is closed. Take a slow breath, and feel the relief of that."
+      },
+      {
+        "instruction": "Now we are going to play a gentle game to soften linear thinking. Let your mind generate a random, unconnected image — any image at all. A red umbrella. A wooden spoon. A lighthouse. A blue sock. Don't hold onto it — let it dissolve and let the next one arrive: a cracked flowerpot, a train whistle, a silver key, a field of tall grass. These images don't mean anything. They don't connect to each other. That's exactly the point. Let them drift through like leaves on a slow current, one after another, soft and meaningless and free."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "As the images drift, let your body follow. Feel your face go smooth and expressionless. Let your jaw go loose. Your shoulders melt into the mattress. Your chest becomes soft. Your belly rises and falls on its own, without effort. Your legs are heavy, limp, completely at rest. Feel yourself not just lying on the bed, but melting gently into it — the boundary between you and the warmth beneath you becoming softer and softer."
+      },
+      {
+        "silenceDurationSeconds": 90
+      },
+      {
+        "instruction": "You have arrived at the edge of sleep. You are not required to cross it — but you are welcome to. Wherever you are on that edge, rest is already happening. Your mind is quieter than it was. Your body is heavier. The day has released you, and you have released the day. Breathe slowly... let the random images continue if they come... let your thoughts drift apart like mist... and give yourself full, complete permission to sleep."
+      }
+    ]
+  }
+]
