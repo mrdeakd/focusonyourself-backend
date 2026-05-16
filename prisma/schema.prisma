@@ -37,3 +37,9 @@ model Affirmation {
   quote    String
   category String
 }
+
+model NarrationEntry {
+  id          Int    @id @default(autoincrement())
+  instruction String @unique
+  audioUrl    String
+}

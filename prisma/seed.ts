@@ -106,10 +106,32 @@ async function seedAffirmations() {
   console.log(`Seeded ${raw.length} affirmations.`)
 }
 
+async function seedNarrationEntries() {
+  const count = await prisma.narrationEntry.count()
+  if (count > 0) {
+    console.log(`Database already has ${count} narration entries, skipping seed.`)
+    return
+  }
+
+  const baseUrl = process.env.SUPABASE_AUDIO_URL ?? ''
+  const jsonPath = path.join(process.cwd(), 'prisma', 'narration_map.json')
+  const raw: Record<string, string> = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'))
+
+  await prisma.narrationEntry.createMany({
+    data: Object.entries(raw).map(([instruction, filename]) => ({
+      instruction,
+      audioUrl: `${baseUrl}/${filename}.mp3`,
+    })),
+  })
+
+  console.log(`Seeded ${Object.keys(raw).length} narration entries.`)
+}
+
 async function main() {
   await seedArticles()
   await seedMeditations()
   await seedAffirmations()
+  await seedNarrationEntries()
 }
 
 main()
