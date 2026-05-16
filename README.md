@@ -43,8 +43,9 @@ REST API backend for the FocusOnYourself iOS app. Serves all content — article
 ### Algorithms
 | | |
 |--|--|
-| **Seeded daily article shuffle** | DJB2 hash of date string → xorshift-64 RNG → Fisher-Yates shuffle, ported from the original Swift implementation for identical results |
-| **Affirmation shuffle** | `seedrandom`-based random shuffle per request (result cached on iOS for the day) |
+| **Shared `seededShuffle<T>`** | Fisher-Yates shuffle powered by `seedrandom` — extracted to `src/utils/shuffle.ts` and used by both articles and affirmations routes |
+| **Article daily selection** | Date string (`YYYY-MM-DD`) used as seed → same 4 articles returned all day for a given date |
+| **Affirmation batch** | `Date.now()` used as seed → different random batch each request (iOS caches the result for the day) |
 
 ---
 
@@ -54,6 +55,8 @@ REST API backend for the FocusOnYourself iOS app. Serves all content — article
 src/
 ├── index.ts              # Express app — mounts morgan, routes, health check
 ├── db.ts                 # Shared Prisma client (libsql adapter)
+├── utils/
+│   └── shuffle.ts        # Shared seededShuffle<T> (Fisher-Yates + seedrandom)
 └── routes/
     ├── articles.ts       # Daily article selection with seeded shuffle
     ├── meditations.ts    # Sessions + nested steps, category filter

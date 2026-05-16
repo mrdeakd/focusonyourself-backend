@@ -1,18 +1,8 @@
 import { Router, Request, Response } from 'express'
-import seedrandom from 'seedrandom'
 import { prisma } from '../db'
+import { seededShuffle } from '../utils/shuffle'
 
 const router = Router()
-
-function seededShuffle<T>(items: T[], date: string): T[] {
-  const rng = seedrandom(date)
-  const arr = [...items]
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1))
-    ;[arr[i], arr[j]] = [arr[j], arr[i]]
-  }
-  return arr
-}
 
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
 

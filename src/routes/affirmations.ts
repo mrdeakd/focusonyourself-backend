@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express'
-import seedrandom from 'seedrandom'
 import { prisma } from '../db'
+import { seededShuffle } from '../utils/shuffle'
 
 const router = Router()
 
@@ -32,8 +32,7 @@ router.get('/batch', async (req: Request, res: Response) => {
     where: { category: { in: categories } },
   })
 
-  const rng = seedrandom(Date.now().toString())
-  const shuffled = [...affirmations].sort(() => rng() - 0.5)
+  const shuffled = seededShuffle(affirmations, Date.now().toString())
 
   res.json(shuffled.slice(0, count).map(({ quote, category }) => ({ quote, category })))
 })
