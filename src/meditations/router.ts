@@ -1,11 +1,12 @@
 import { Router, Request, Response } from 'express'
-import { prisma } from '../db'
+import { asyncHandler } from '../utils/asyncHandler'
+import { getMeditationSessions } from './service'
 
 const router = Router()
 
 const VALID_CATEGORIES = ['morning', 'focus', 'anxiety', 'sleep']
 
-router.get('/', async (req: Request, res: Response) => {
+router.get('/', asyncHandler(async (req: Request, res: Response) => {
   const category = req.query.category as string | undefined
 
   if (category !== undefined && !VALID_CATEGORIES.includes(category)) {
@@ -15,14 +16,7 @@ router.get('/', async (req: Request, res: Response) => {
     return
   }
 
-  const sessions = await prisma.meditationSession.findMany({
-    where: category ? { category } : undefined,
-    include: {
-      steps: { orderBy: { order: 'asc' } },
-    },
-  })
-
-  res.json(sessions)
-})
+  res.json(await getMeditationSessions(category))
+}))
 
 export default router

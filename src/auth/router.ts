@@ -1,6 +1,7 @@
-import { Router, Request, Response, NextFunction } from 'express'
+import { Router, Request, Response } from 'express'
 import { prisma } from '../db'
 import { authenticate } from '../middleware/authenticate'
+import { asyncHandler } from '../utils/asyncHandler'
 import {
   hashPassword,
   comparePassword,
@@ -10,10 +11,6 @@ import {
 } from './service'
 
 const router = Router()
-
-function asyncHandler(fn: (req: Request, res: Response, next: NextFunction) => Promise<void>) {
-  return (req: Request, res: Response, next: NextFunction) => fn(req, res, next).catch(next)
-}
 
 // POST /api/auth/register
 router.post('/register', asyncHandler(async (req: Request, res: Response) => {
@@ -66,7 +63,7 @@ router.post('/login', asyncHandler(async (req: Request, res: Response) => {
 }))
 
 // POST /api/auth/refresh
-router.post('/refresh', async (req: Request, res: Response) => {
+router.post('/refresh', asyncHandler(async (req: Request, res: Response) => {
   const { refreshToken } = req.body
 
   if (!refreshToken || typeof refreshToken !== 'string') {
@@ -74,13 +71,8 @@ router.post('/refresh', async (req: Request, res: Response) => {
     return
   }
 
-  try {
-    const tokens = await rotateRefreshToken(refreshToken)
-    res.json(tokens)
-  } catch (err: any) {
-    res.status(err.status ?? 401).json({ error: err.message })
-  }
-})
+  res.json(await rotateRefreshToken(refreshToken))
+}))
 
 // POST /api/auth/logout
 router.post('/logout', asyncHandler(async (req: Request, res: Response) => {

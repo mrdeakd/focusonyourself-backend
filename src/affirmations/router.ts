@@ -1,12 +1,12 @@
 import { Router, Request, Response } from 'express'
-import { prisma } from '../db'
-import { seededShuffle } from '../utils/shuffle'
+import { asyncHandler } from '../utils/asyncHandler'
+import { getAffirmationBatch } from './service'
 
 const router = Router()
 
 const VALID_CATEGORIES = ['confidence', 'health', 'relationships', 'mindfulness', 'career', 'resilience']
 
-router.get('/batch', async (req: Request, res: Response) => {
+router.get('/batch', asyncHandler(async (req: Request, res: Response) => {
   const rawCategories = req.query.categories as string | undefined
   const rawCount = req.query.count as string | undefined
 
@@ -28,13 +28,7 @@ router.get('/batch', async (req: Request, res: Response) => {
     return
   }
 
-  const affirmations = await prisma.affirmation.findMany({
-    where: { category: { in: categories } },
-  })
-
-  const shuffled = seededShuffle(affirmations, Date.now().toString())
-
-  res.json(shuffled.slice(0, count).map(({ quote, category }) => ({ quote, category })))
-})
+  res.json(await getAffirmationBatch(categories, count))
+}))
 
 export default router

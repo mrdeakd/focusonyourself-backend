@@ -1,12 +1,12 @@
 import { Router, Request, Response } from 'express'
-import { prisma } from '../db'
-import { seededShuffle } from '../utils/shuffle'
+import { asyncHandler } from '../utils/asyncHandler'
+import { getDailyArticles } from './service'
 
 const router = Router()
 
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
 
-router.get('/daily', async (req: Request, res: Response) => {
+router.get('/daily', asyncHandler(async (req: Request, res: Response) => {
   const rawDate = req.query.date as string | undefined
   const dateStr = rawDate ?? new Date().toISOString().slice(0, 10)
 
@@ -15,10 +15,7 @@ router.get('/daily', async (req: Request, res: Response) => {
     return
   }
 
-  const articles = await prisma.article.findMany()
-  const shuffled = seededShuffle(articles, dateStr)
-
-  res.json(shuffled.slice(0, 4))
-})
+  res.json(await getDailyArticles(dateStr))
+}))
 
 export default router
