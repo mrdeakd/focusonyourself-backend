@@ -127,11 +127,25 @@ async function seedNarrationEntries() {
   console.log(`Seeded ${Object.keys(raw).length} narration entries.`)
 }
 
+async function seedDevUser() {
+  const email = 'dev@test.com'
+  const existing = await prisma.user.findUnique({ where: { email } })
+  if (existing) {
+    console.log('Dev user already exists, skipping.')
+    return
+  }
+  const bcrypt = await import('bcryptjs')
+  const passwordHash = await bcrypt.hash('password123', 12)
+  await prisma.user.create({ data: { email, passwordHash } })
+  console.log(`Seeded dev user: ${email}`)
+}
+
 async function main() {
   await seedArticles()
   await seedMeditations()
   await seedAffirmations()
   await seedNarrationEntries()
+  await seedDevUser()
 }
 
 main()

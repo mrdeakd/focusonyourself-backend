@@ -351,3 +351,78 @@ Running `ts-node` at container startup compiles TypeScript on-the-fly, consuming
 
 ### libsql + SQLite uses heavy virtual memory mapping
 The libsql adapter memory-maps SQLite files, inflating virtual memory to ~11GB even for small databases. On Linux systems with strict overcommit settings (common on cloud free tiers), the OOM killer fires even when actual RSS usage is low (~74MB). For free-tier cloud deployment, use Turso's hosted libsql instead — it connects over HTTP and has no mmap overhead.
+
+---
+
+## Authentication
+
+### What is bcrypt?
+
+bcrypt is a one-way password hashing function. "One-way" means there is no way to reverse it — you can only *verify* a guess by hashing it again and comparing the output. This is intentional: if your database is ever leaked, the attacker gets password hashes, not passwords.
+
+Why not SHA-256 or MD5? Those are *cryptographic hash functions*, not password hash functions. They are designed to be fast — a modern GPU can compute billions of SHA-256 hashes per second. bcrypt is *deliberately slow* via an adaptive cost factor. At `cost: 12`, one hash takes ~250ms. That makes brute-forcing a leaked database 10 million times harder than with SHA-256.
+
+```typescript
+const hash = await bcrypt.hash('mypassword', 12)       // store this in the DB
+const valid = await bcrypt.compare('mypassword', hash) // true
+const wrong = await bcrypt.compare('wrongpass',  hash) // false
+```
+
+The salt (a random value that prevents two identical passwords from producing the same hash) is built into the bcrypt output string — you don't manage it separately.
+
+---
+
+### JWT anatomy
+
+A JWT (JSON Web Token) looks like: `header.payload.signature`
+
+Each part is base64url-encoded. The **header** says which algorithm was used (e.g. `{ "alg": "HS256" }`). The **payload** carries claims:
+
+```json
+{ "sub": "cmp9sdbjg0000eu1pvda0cjf9", "iat": 1779023081, "exp": 1779023981 }
+```
+
+- `sub` — subject (the user's ID)
+- `iat` — issued at (Unix timestamp)
+- `exp` — expiry (Unix timestamp)
+
+The **signature** is `HMAC-SHA256(base64url(header) + "." + base64url(payload), secret)`. Anyone who has the secret can verify the signature. Anyone who tampers with the payload will have a signature mismatch.
+
+**Important:** JWTs are *signed*, not *encrypted*. Anyone can decode the payload — never put sensitive data (passwords, PII) inside a JWT. The signature only proves the token was created by someone who knew the secret.
+
+---
+
+### Access token vs refresh token
+
+| | Access token | Refresh token |
+|--|--|--|
+| **TTL** | 15 minutes | 30 days |
+| **Stored** | iOS Keychain (client only) | iOS Keychain **and** server DB |
+| **Purpose** | Prove identity on each API request | Exchange for a new access token |
+| **Revocable** | No — stateless, valid until expiry | Yes — delete the DB row |
+
+Short-lived access tokens limit the damage if one is leaked — it expires in minutes. Long-lived refresh tokens mean the user doesn't have to log in again every 15 minutes. When a refresh token is used, the server deletes it and issues a new one (*rotation*) — this means a stolen refresh token can only be used once before it's invalidated.
+
+---
+
+### authenticate middleware
+
+Express middleware is a function with the signature `(req, res, next) => void`. It runs before the route handler and can inspect/modify the request or short-circuit with a response.
+
+`authenticate` in `src/middleware/authenticate.ts` does three things:
+
+1. **Extracts** the `Authorization: Bearer <token>` header. Returns 401 if missing or malformed.
+2. **Verifies** the JWT signature and expiry with `jwt.verify(token, JWT_SECRET)`. Returns 401 with a specific error (`"Token expired"` vs `"Invalid token"`) depending on the failure reason.
+3. **Attaches** `req.user = { id, email }` on success and calls `next()` to pass control to the route handler.
+
+```typescript
+// Apply to a single route:
+router.get('/me', authenticate, (req, res) => {
+  res.json(req.user) // user guaranteed to exist here
+})
+
+// Apply to all routes in a router:
+router.use(authenticate)
+```
+
+The route handler never needs to repeat token validation — the middleware guarantees that if it runs, `req.user` is valid.
