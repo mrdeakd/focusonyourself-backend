@@ -51,6 +51,24 @@ model User {
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
   refreshTokens RefreshToken[]
+  checkIns      CheckIn[]
+}
+
+model CheckIn {
+  id                  String   @id @default(cuid())
+  userId              String
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dateString          String
+  mood                String
+  feelingsDescription String?
+  sleepQuality        Int?
+  stressLevel         Int?
+  exercised           Boolean?
+  socialQuality       Int?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([userId, dateString])
 }
 
 model RefreshToken {
