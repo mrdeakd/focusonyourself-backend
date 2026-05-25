@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, existsSync } from 'fs'
 import { join } from 'path'
+import { X509Certificate } from 'crypto'
 import {
   SignedDataVerifier,
   Environment,
@@ -24,7 +25,20 @@ function loadRootCertificates(): Buffer[] {
   if (files.length === 0) {
     throw new Error(`No .cer/.der files found in ${ROOTS_DIR}`)
   }
-  return files.map((f) => readFileSync(join(ROOTS_DIR, f)))
+  return files.map((f) => {
+    const fullPath = join(ROOTS_DIR, f)
+    const buf = readFileSync(fullPath)
+    const head = buf.subarray(0, Math.min(32, buf.length))
+    const hex = head.toString('hex')
+    const ascii = head.toString('utf8').replace(/[^\x20-\x7E]/g, '.')
+    try {
+      const cert = new X509Certificate(buf)
+      console.log(`[appleVerifier] OK ${f} bytes=${buf.length} subject="${cert.subject}" issuer="${cert.issuer}"`)
+    } catch (err: any) {
+      console.error(`[appleVerifier] FAILED to parse ${f}: bytes=${buf.length} headHex=${hex} headAscii="${ascii}" err=${err?.message}`)
+    }
+    return buf
+  })
 }
 
 const verifierCache = new Map<Environment, SignedDataVerifier>()
