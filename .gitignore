@@ -24,3 +24,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Apple root certificates — each environment provides its own copy
+certs/apple-roots/*.cer
+certs/apple-roots/*.der

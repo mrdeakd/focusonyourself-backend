@@ -5,6 +5,7 @@ import { asyncHandler } from '../utils/asyncHandler'
 import { getAuthedUser } from '../utils/authedRequest'
 import { httpError } from '../utils/httpError'
 import { registerUser, loginUser, rotateRefreshToken, logoutUser } from './service'
+import { userProSnapshot } from '../subscriptions/service'
 
 const router = Router()
 
@@ -43,7 +44,9 @@ router.post('/logout', asyncHandler(async (req, res) => {
 }))
 
 router.get('/me', authenticate, asyncHandler(async (req, res) => {
-  res.json(getAuthedUser(req))
+  const user = getAuthedUser(req)
+  const pro = await userProSnapshot(user.id)
+  res.json({ ...user, isPro: pro.isPro, proExpiresAt: pro.expiresAt })
 }))
 
 export default router
