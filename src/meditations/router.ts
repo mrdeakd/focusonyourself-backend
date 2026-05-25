@@ -1,21 +1,16 @@
-import { Router, Request, Response } from 'express'
+import { Router } from 'express'
 import { asyncHandler } from '../utils/asyncHandler'
+import { assertOneOf } from '../utils/validation'
 import { getMeditationSessions } from './service'
 
 const router = Router()
 
-const VALID_CATEGORIES = ['morning', 'focus', 'anxiety', 'sleep']
+const VALID_CATEGORIES = ['morning', 'focus', 'anxiety', 'sleep'] as const
 
-router.get('/', asyncHandler(async (req: Request, res: Response) => {
-  const category = req.query.category as string | undefined
-
-  if (category !== undefined && !VALID_CATEGORIES.includes(category)) {
-    res.status(400).json({
-      error: `Invalid category. Valid values: ${VALID_CATEGORIES.join(', ')}`,
-    })
-    return
-  }
-
+router.get('/', asyncHandler(async (req, res) => {
+  const category = req.query.category !== undefined
+    ? assertOneOf(req.query.category, VALID_CATEGORIES, 'category')
+    : undefined
   res.json(await getMeditationSessions(category))
 }))
 

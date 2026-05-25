@@ -1,56 +1,80 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import { prisma } from '../db'
+import { httpError } from '../utils/httpError'
 
 const JWT_SECRET = process.env.JWT_SECRET ?? 'dev-jwt-secret'
 const REFRESH_SECRET = process.env.REFRESH_SECRET ?? 'dev-refresh-secret'
+const REFRESH_TTL_MS = 30 * 24 * 60 * 60 * 1000
 
-export async function hashPassword(plain: string): Promise<string> {
+export interface AuthResult {
+  accessToken: string
+  refreshToken: string
+  user: { id: string; email: string }
+}
+
+async function hashPassword(plain: string): Promise<string> {
   return bcrypt.hash(plain, 12)
 }
 
-export async function comparePassword(plain: string, hash: string): Promise<boolean> {
+async function comparePassword(plain: string, hash: string): Promise<boolean> {
   return bcrypt.compare(plain, hash)
 }
 
-export function signAccessToken(userId: string): string {
+function signAccessToken(userId: string): string {
   return jwt.sign({ sub: userId }, JWT_SECRET, { expiresIn: '15m' })
 }
 
-export function signRefreshToken(userId: string): string {
+function signRefreshToken(userId: string): string {
   return jwt.sign({ sub: userId }, REFRESH_SECRET, { expiresIn: '30d' })
 }
 
-export async function storeRefreshToken(token: string, userId: string, expiresAt: Date): Promise<void> {
-  await prisma.refreshToken.create({ data: { token, userId, expiresAt } })
+async function issueAuthResult(user: { id: string; email: string }): Promise<AuthResult> {
+  const accessToken = signAccessToken(user.id)
+  const refreshToken = signRefreshToken(user.id)
+  const expiresAt = new Date(Date.now() + REFRESH_TTL_MS)
+  await prisma.refreshToken.create({ data: { token: refreshToken, userId: user.id, expiresAt } })
+  return { accessToken, refreshToken, user }
+}
+
+export async function registerUser(email: string, password: string): Promise<AuthResult> {
+  if (await prisma.user.findUnique({ where: { email } })) {
+    throw httpError(409, 'Email already in use')
+  }
+  const passwordHash = await hashPassword(password)
+  const user = await prisma.user.create({ data: { email, passwordHash }, select: { id: true, email: true } })
+  return issueAuthResult(user)
+}
+
+export async function loginUser(email: string, password: string): Promise<AuthResult> {
+  const user = await prisma.user.findUnique({ where: { email } })
+  if (!user || !(await comparePassword(password, user.passwordHash))) {
+    throw httpError(401, 'Invalid credentials')
+  }
+  return issueAuthResult({ id: user.id, email: user.email })
 }
 
 export async function rotateRefreshToken(oldToken: string): Promise<{ accessToken: string; refreshToken: string }> {
   const existing = await prisma.refreshToken.findUnique({ where: { token: oldToken } })
-
-  if (!existing) {
-    throw Object.assign(new Error('Invalid refresh token'), { status: 401 })
-  }
+  if (!existing) throw httpError(401, 'Invalid refresh token')
 
   if (existing.expiresAt < new Date()) {
     await prisma.refreshToken.delete({ where: { token: oldToken } })
-    throw Object.assign(new Error('Refresh token expired'), { status: 401 })
+    throw httpError(401, 'Refresh token expired')
   }
 
   await prisma.refreshToken.delete({ where: { token: oldToken } })
 
   const accessToken = signAccessToken(existing.userId)
   const refreshToken = signRefreshToken(existing.userId)
-  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
-
-  await storeRefreshToken(refreshToken, existing.userId, expiresAt)
+  const expiresAt = new Date(Date.now() + REFRESH_TTL_MS)
+  await prisma.refreshToken.create({ data: { token: refreshToken, userId: existing.userId, expiresAt } })
 
   return { accessToken, refreshToken }
 }
 
-export function issueTokenPair(userId: string): { accessToken: string; refreshToken: string; expiresAt: Date } {
-  const accessToken = signAccessToken(userId)
-  const refreshToken = signRefreshToken(userId)
-  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
-  return { accessToken, refreshToken, expiresAt }
+export async function logoutUser(refreshToken: string | undefined): Promise<void> {
+  if (refreshToken && typeof refreshToken === 'string') {
+    await prisma.refreshToken.deleteMany({ where: { token: refreshToken } })
+  }
 }

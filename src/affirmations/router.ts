@@ -1,33 +1,28 @@
-import { Router, Request, Response } from 'express'
+import { Router } from 'express'
 import { asyncHandler } from '../utils/asyncHandler'
+import { httpError } from '../utils/httpError'
+import { assertPositiveInt } from '../utils/validation'
 import { getAffirmationBatch } from './service'
 
 const router = Router()
 
 const VALID_CATEGORIES = ['confidence', 'health', 'relationships', 'mindfulness', 'career', 'resilience']
 
-router.get('/batch', asyncHandler(async (req: Request, res: Response) => {
-  const rawCategories = req.query.categories as string | undefined
-  const rawCount = req.query.count as string | undefined
-
-  if (!rawCategories || rawCategories.trim() === '') {
-    res.status(400).json({ error: 'categories is required. Valid values: ' + VALID_CATEGORIES.join(', ') })
-    return
+function parseBatchQuery(query: any): { categories: string[]; count: number } {
+  const rawCategories = typeof query.categories === 'string' ? query.categories : ''
+  if (rawCategories.trim() === '') {
+    throw httpError(400, `categories is required. Valid values: ${VALID_CATEGORIES.join(', ')}`)
   }
-
-  const categories = rawCategories.split(',').map(c => c.trim())
-  const invalid = categories.filter(c => !VALID_CATEGORIES.includes(c))
+  const categories = rawCategories.split(',').map((c: string) => c.trim())
+  const invalid = categories.filter((c: string) => !VALID_CATEGORIES.includes(c))
   if (invalid.length > 0) {
-    res.status(400).json({ error: `Invalid categories: ${invalid.join(', ')}. Valid values: ${VALID_CATEGORIES.join(', ')}` })
-    return
+    throw httpError(400, `Invalid categories: ${invalid.join(', ')}. Valid values: ${VALID_CATEGORIES.join(', ')}`)
   }
+  return { categories, count: assertPositiveInt(query.count, 'count') }
+}
 
-  const count = parseInt(rawCount ?? '', 10)
-  if (!rawCount || isNaN(count) || count <= 0) {
-    res.status(400).json({ error: 'count is required and must be a positive integer.' })
-    return
-  }
-
+router.get('/batch', asyncHandler(async (req, res) => {
+  const { categories, count } = parseBatchQuery(req.query)
   res.json(await getAffirmationBatch(categories, count))
 }))
 
