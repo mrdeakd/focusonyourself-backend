@@ -44,7 +44,13 @@ router.post(
     let payload
     try {
       payload = await verifyTransaction(signedTransaction)
-    } catch {
+    } catch (err: any) {
+      console.error('[subscriptions/verify] verifyTransaction threw:', {
+        message: err?.message,
+        status: err?.status,
+        cause: err?.cause?.message ?? err?.cause,
+        name: err?.name,
+      })
       throw httpError(400, 'signedTransaction failed verification')
     }
 
@@ -77,7 +83,13 @@ router.post(
     let envelope
     try {
       envelope = await verifyNotification(signedPayload)
-    } catch {
+    } catch (err: any) {
+      console.error('[subscriptions/notifications] verifyNotification threw:', {
+        message: err?.message,
+        status: err?.status,
+        cause: err?.cause?.message ?? err?.cause,
+        name: err?.name,
+      })
       throw httpError(401, 'notification failed verification')
     }
 

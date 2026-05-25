@@ -18,7 +18,9 @@ function loadRootCertificates(): Buffer[] {
         `(AppleIncRootCertificate.cer, AppleRootCA-G2.cer, AppleRootCA-G3.cer) and place them there.`,
     )
   }
-  const files = readdirSync(ROOTS_DIR).filter((f) => f.endsWith('.cer') || f.endsWith('.der'))
+  const allFiles = readdirSync(ROOTS_DIR)
+  const files = allFiles.filter((f) => f.endsWith('.cer') || f.endsWith('.der'))
+  console.log(`[appleVerifier] ROOTS_DIR=${ROOTS_DIR} all=${JSON.stringify(allFiles)} matched=${JSON.stringify(files)}`)
   if (files.length === 0) {
     throw new Error(`No .cer/.der files found in ${ROOTS_DIR}`)
   }
