@@ -8,6 +8,7 @@ import narrationMapRoutes from './narration/router'
 import authRoutes from './auth/router'
 import checkInRoutes from './checkins/router'
 import subscriptionRoutes from './subscriptions/router'
+import streakRoutes from './streaks/router'
 
 const app = express()
 app.set('trust proxy', 1)
@@ -25,6 +26,7 @@ app.use('/api/narration-map', narrationMapRoutes)
 app.use('/api/auth', authRoutes)
 app.use('/api/checkins', checkInRoutes)
 app.use('/api/subscriptions', subscriptionRoutes)
+app.use('/api/streaks', streakRoutes)
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
