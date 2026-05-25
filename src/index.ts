@@ -9,6 +9,7 @@ import authRoutes from './auth/router'
 import checkInRoutes from './checkins/router'
 
 const app = express()
+app.set('trust proxy', 1)
 const PORT = Number(process.env.PORT) || 3005
 
 app.use(morgan('tiny'))
