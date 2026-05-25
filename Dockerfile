@@ -18,6 +18,8 @@ RUN npx prisma generate
 COPY src ./src/
 RUN npm run build
 
+COPY certs ./certs/
+
 RUN mkdir -p /app/data
 
 EXPOSE 3005

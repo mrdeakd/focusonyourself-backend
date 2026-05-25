@@ -9,7 +9,7 @@ import {
 } from '@apple/app-store-server-library'
 
 const BUNDLE_ID = process.env.APPLE_BUNDLE_ID ?? ''
-const ROOTS_DIR = process.env.APPLE_ROOT_CERTS_DIR ?? join(__dirname, '..', '..', 'certs', 'apple-roots')
+const ROOTS_DIR = process.env.APPLE_ROOT_CERTS_DIR ?? join(process.cwd(), 'certs', 'apple-roots')
 
 function loadRootCertificates(): Buffer[] {
   if (!existsSync(ROOTS_DIR)) {
