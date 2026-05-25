@@ -1,93 +1,49 @@
-import { Router, Request, Response } from 'express'
-import { prisma } from '../db'
+import { Router } from 'express'
 import { authenticate } from '../middleware/authenticate'
+import { registerLimiter, loginLimiter, refreshLimiter } from '../middleware/rateLimit'
 import { asyncHandler } from '../utils/asyncHandler'
-import {
-  hashPassword,
-  comparePassword,
-  issueTokenPair,
-  storeRefreshToken,
-  rotateRefreshToken,
-} from './service'
+import { getAuthedUser } from '../utils/authedRequest'
+import { httpError } from '../utils/httpError'
+import { registerUser, loginUser, rotateRefreshToken, logoutUser } from './service'
 
 const router = Router()
 
-// POST /api/auth/register
-router.post('/register', asyncHandler(async (req: Request, res: Response) => {
-  const { email, password } = req.body
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    res.status(400).json({ error: 'Invalid email' })
-    return
-  }
+function parseCredentials(body: any): { email: string; password: string } {
+  const { email, password } = body ?? {}
+  if (typeof email !== 'string' || !EMAIL_REGEX.test(email)) throw httpError(400, 'Invalid email')
+  if (typeof password !== 'string' || password.length < 8) throw httpError(400, 'Password must be at least 8 characters')
+  return { email, password }
+}
 
-  if (!password || password.length < 8) {
-    res.status(400).json({ error: 'Password must be at least 8 characters' })
-    return
-  }
+function parseRefreshToken(body: any): string {
+  const { refreshToken } = body ?? {}
+  if (typeof refreshToken !== 'string' || refreshToken.length === 0) throw httpError(400, 'Refresh token required')
+  return refreshToken
+}
 
-  const existing = await prisma.user.findUnique({ where: { email } })
-  if (existing) {
-    res.status(409).json({ error: 'Email already in use' })
-    return
-  }
-
-  const passwordHash = await hashPassword(password)
-  const user = await prisma.user.create({ data: { email, passwordHash } })
-  const { accessToken, refreshToken, expiresAt } = issueTokenPair(user.id)
-  await storeRefreshToken(refreshToken, user.id, expiresAt)
-
-  res.status(201).json({ accessToken, refreshToken, user: { id: user.id, email: user.email } })
+router.post('/register', registerLimiter, asyncHandler(async (req, res) => {
+  const { email, password } = parseCredentials(req.body)
+  res.status(201).json(await registerUser(email, password))
 }))
 
-// POST /api/auth/login
-router.post('/login', asyncHandler(async (req: Request, res: Response) => {
-  const { email, password } = req.body
-
-  const user = await prisma.user.findUnique({ where: { email } })
-  if (!user) {
-    res.status(401).json({ error: 'Invalid credentials' })
-    return
-  }
-
-  const valid = await comparePassword(password, user.passwordHash)
-  if (!valid) {
-    res.status(401).json({ error: 'Invalid credentials' })
-    return
-  }
-
-  const { accessToken, refreshToken, expiresAt } = issueTokenPair(user.id)
-  await storeRefreshToken(refreshToken, user.id, expiresAt)
-
-  res.json({ accessToken, refreshToken, user: { id: user.id, email: user.email } })
+router.post('/login', ...loginLimiter, asyncHandler(async (req, res) => {
+  const { email, password } = parseCredentials(req.body)
+  res.json(await loginUser(email, password))
 }))
 
-// POST /api/auth/refresh
-router.post('/refresh', asyncHandler(async (req: Request, res: Response) => {
-  const { refreshToken } = req.body
-
-  if (!refreshToken || typeof refreshToken !== 'string') {
-    res.status(400).json({ error: 'Refresh token required' })
-    return
-  }
-
-  res.json(await rotateRefreshToken(refreshToken))
+router.post('/refresh', refreshLimiter, asyncHandler(async (req, res) => {
+  res.json(await rotateRefreshToken(parseRefreshToken(req.body)))
 }))
 
-// POST /api/auth/logout
-router.post('/logout', asyncHandler(async (req: Request, res: Response) => {
-  const { refreshToken } = req.body
-
-  if (refreshToken && typeof refreshToken === 'string') {
-    await prisma.refreshToken.deleteMany({ where: { token: refreshToken } })
-  }
-
+router.post('/logout', asyncHandler(async (req, res) => {
+  await logoutUser(req.body?.refreshToken)
   res.sendStatus(204)
 }))
 
-// GET /api/auth/me
-router.get('/me', authenticate, (req: Request, res: Response) => {
-  res.json(req.user)
-})
+router.get('/me', authenticate, asyncHandler(async (req, res) => {
+  res.json(getAuthedUser(req))
+}))
 
 export default router
