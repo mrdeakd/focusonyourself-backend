@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import { prisma } from '../db'
@@ -22,11 +23,11 @@ async function comparePassword(plain: string, hash: string): Promise<boolean> {
 }
 
 function signAccessToken(userId: string): string {
-  return jwt.sign({ sub: userId }, JWT_SECRET, { expiresIn: '15m' })
+  return jwt.sign({ sub: userId, jti: randomUUID() }, JWT_SECRET, { expiresIn: '15m' })
 }
 
 function signRefreshToken(userId: string): string {
-  return jwt.sign({ sub: userId }, REFRESH_SECRET, { expiresIn: '30d' })
+  return jwt.sign({ sub: userId, jti: randomUUID() }, REFRESH_SECRET, { expiresIn: '30d' })
 }
 
 async function issueAuthResult(user: { id: string; email: string }): Promise<AuthResult> {
